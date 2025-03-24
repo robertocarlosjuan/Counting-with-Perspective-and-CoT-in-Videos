@@ -2,6 +2,12 @@
 Using Perspectives and Chain-of-Thought to help Gemini count Object Instances in Videos from Continuous Perception Benchmark
 Based on https://github.com/shaunak27/video_instance_counting.git
 
+## Key Findings
+1. Gemini is biased to multiplying: Assumes every table has same number of objects.
+   -> Force it to count for each table
+2. Gemini has no idea how the camera is moving.
+   -> It thinks it's zooming out or sth when its just left to right movement
+
 ## Installation
 
 1. Clone the repository:
