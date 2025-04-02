@@ -3,10 +3,22 @@ Using Perspectives and Chain-of-Thought to help Gemini count Object Instances in
 Based on https://github.com/shaunak27/video_instance_counting.git
 
 ## Key Findings
-1. Gemini is biased to multiplying: Assumes every table has same number of objects.
-   -> Force it to count for each table
-2. Gemini has no idea how the camera is moving.
-   -> It thinks it's zooming out or sth when its just left to right movement
+1. Gemini is biased to multiplying: Assumes every table has same number of objects.  
+   -> Force it to count for each table  
+   -> Reprompting as Table-by-table Chain-of-Though (TbTCoT) model  
+3. Gemini has no idea how the camera is moving.  
+   -> It thinks it's zooming out or sth when its just left to right movement  
+   -> Reprompting as Perspective model  
+
+| Models | Prompt       | Off-by-zero (%) | Off-by-one (%) | Off-by-five (%) |
+|--------|--------------|------------------|----------------|-----------------|
+| Gemini1.5-flash | Original     | 10               | 24             | 57              |
+|        | Perspective  | 13.5             | 28             | 57.5            |
+|        | TbTCoT       | 8                | 25             | 80              |
+|        | Combined     | 10               | 27             | 76.5            |
+| Qwen7b   | Original     | 3                | 7              | 20              |
+|        | Perspective  | 0                | 5              | 18              |
+
 
 ## Installation
 
