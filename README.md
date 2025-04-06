@@ -15,7 +15,6 @@ Based on https://github.com/shaunak27/video_instance_counting.git
 | Gemini1.5-flash | Original     | 10               | 24             | 57              |
 |        | Perspective  | 13.5             | 28             | 57.5            |
 |        | TbTCoT       | 8                | 25             | 80              |
-|        | Combined     | 10               | 27             | 76.5            |
 
 
 ## Installation
