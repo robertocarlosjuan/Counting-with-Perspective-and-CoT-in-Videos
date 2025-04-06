@@ -16,8 +16,6 @@ Based on https://github.com/shaunak27/video_instance_counting.git
 |        | Perspective  | 13.5             | 28             | 57.5            |
 |        | TbTCoT       | 8                | 25             | 80              |
 |        | Combined     | 10               | 27             | 76.5            |
-| Qwen7b   | Original     | 3                | 7              | 20              |
-|        | Perspective  | 0                | 5              | 18              |
 
 
 ## Installation
