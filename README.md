@@ -42,7 +42,7 @@ Based on https://github.com/shaunak27/video_instance_counting.git
     ```
 ## Evaluation
 
-1. Download the data from the [Google Drive link](https://drive.google.com/drive/u/2/folders/1gvX3JOXd06CMdCSMJGhwoCgWs5wK-nXb).
+1. Download the data from the [Google Drive link](https://drive.google.com/drive/u/2/folders/1gvX3JOXd06CMdCSMJGhwoCgWs5wK-nXb) and [example video](https://drive.google.com/file/d/1DLP4FCWokGS6uKz98FD4e1Snh0LQ24W1/view?usp=sharing).
 2. Run the evaluation script:
     ```sh
     python evaluation.py --data_path /path/to/your/data --ground_truth_path /path/to/your/ground_truth_file --output_file /path/to/output --prompt_type [original|perspective|one_shot|one_shot_perspective] --model [gemini|qwen]
