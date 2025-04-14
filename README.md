@@ -16,12 +16,14 @@ Based on https://github.com/shaunak27/video_instance_counting.git
 |        | Perspective  | 13.5             | 28             | 57.5            |
 |        | TbTCoT       | 8                | 25             | 80              |
 
-## Further Insights with Gemini 2.0
-`prompt = 'As a proficient video understanding model, your task is to describe the camera perspective in the video and provide a detailed description that includes aspects such as the camera's angle, movement, framing, zoom level, and depth of field.'`
+## Further Perspective Insights with Gemini 2.0
 From the prompt above, for this dataset consisting of only left to right dolly movement:  
-90% is determined to be a panning movement  
-4.2% determines some zoom level changes
-5.6% correctly identifies only a dolly movement
+**90%** is determined to be a panning movement  
+**4.2%** determines some zoom level changes  
+**5.6%** is **correct** in identifying only a dolly movement  
+```sh
+prompt = "As a proficient video understanding model, your task is to describe the camera perspective in the video and provide a detailed description that includes aspects such as the camera's angle, movement, framing, zoom level, and depth of field."
+```
 
 ## Installation
 
