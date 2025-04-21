@@ -27,6 +27,11 @@ Given videos with cakes on tables
 | Gemini 2.0 Flash  | original             | 8        | 21   | 58     |
 |                   | perspective          | 8.5        | 24.5   | 60.5    |
 
+### Perspectives with Gemini 2.5 Flash
+Given a strictly rightwards motion of camera:
+1. **54%** of the data was predicted to have changes in yaw (i.e. panning)
+2. **52%** of the data was predicted to have forward or backward camera movement
+3. 91.5% of the data was predicted to have side-to-side movement (correct)
 
 ## Installation
 
