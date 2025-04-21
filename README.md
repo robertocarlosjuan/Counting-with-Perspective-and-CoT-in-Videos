@@ -36,3 +36,14 @@ Based on https://github.com/shaunak27/video_instance_counting.git
     ```sh
     python evaluation.py --data_path data --ground_truth_path ground_truth --output_folder results --prompt_type structured_perspective --model "gemini-2.5.pro-exp-03-25"
     ```
+
+## Results
+
+| Model             | Prompt Type          | Off-by-zero (%) | Off-by-one (%) | Off-by-five (%) |
+|-------------------|----------------------|----------|-----|------|
+| Gemini 1.5 Flash    | original             | -        | -   | -    |
+| Gemini 1.5 Flash    | perspective          | -        | -   | -    |
+| Gemini 1.5 Flash    | one_shot             | -        | -   | -    |
+| Gemini 1.5 Flash    | one_shot_perspective | -        | -   | -    |
+
+*Replace the hyphens (-) with your actual evaluation results.*
