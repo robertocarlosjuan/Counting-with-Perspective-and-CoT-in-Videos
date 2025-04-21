@@ -1,5 +1,4 @@
 import os
-os.environ["HF_HOME"] = "/home/hice1/che321/scratch/.cache"
 from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor, BitsAndBytesConfig
 from qwen_vl_utils import process_vision_info
 

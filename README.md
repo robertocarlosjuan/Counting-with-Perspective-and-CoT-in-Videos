@@ -32,3 +32,7 @@ Based on https://github.com/shaunak27/video_instance_counting.git
     ```sh
     python evaluation.py --data_path /path/to/your/data --ground_truth_path /path/to/your/ground_truth_file --output_file /path/to/output --prompt_type [original|perspective|one_shot|one_shot_perspective] --model [gemini|qwen]
     ```
+3. To assess perspective
+    ```sh
+    python evaluation.py --data_path data --ground_truth_path ground_truth --output_folder results --prompt_type structured_perspective --model "gemini-2.5.pro-exp-03-25"
+    ```

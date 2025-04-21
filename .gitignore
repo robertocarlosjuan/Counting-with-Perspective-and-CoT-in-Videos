@@ -1,1 +1,13 @@
+.DS_Store
+.env
+.gitignore
+*.docx
 __pycache__/
+*.ipynb
+data/
+ground_truth/
+keys.txt
+*.mp4
+results/.DS_Store
+results/
+run.sh
