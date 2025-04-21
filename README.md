@@ -2,6 +2,32 @@
 Using Perspectives and Chain-of-Thought to help Gemini count Object Instances in Videos from Continuous Perception Benchmark
 Based on https://github.com/shaunak27/video_instance_counting.git
 
+## Key Findings
+
+In improving Gemini's counting performance, I uncovered 2 key reasons for its failure   
+### Camera Motion Misinterpretation:  
+Given a camera strictly moving rightward:  
+1. Problem: Gemini thought the camera went rightwards then reversed leftwards  
+2. Impact: Gemini explains the second half of the video are the same object instances seen in first half  
+3. **Perspective** Fix: Adding in the prompt that the camera moves strictly rightwards corrected counting from 12 to 24  
+### Bias towards multiplication:  
+Given videos with cakes on tables  
+1. Problem: Gemini assumes same number of cakes on all tables
+2. Impact: Gemini multiplies number of cakes on a table by number of tables  
+3. **TbTCoT** Fix: Force Gemini to count number of cakes Table by Table with Chain-of-Thought (TbTCoT)
+
+   
+
+| Model             | Prompt Type          | Off-by-zero (%) | Off-by-one (%) | Off-by-five (%) |
+|-------------------|----------------------|----------|-----|------|
+| Gemini 1.5 Flash  | original             | 10        | 24   | 57    |
+|                   | perspective          | 13.5        | 28   | 57.5    |
+|                   | TbTCoT             | 8        | 25   | 80    |
+|                   | Combined | 10        | 27   | 76.5    |
+| Gemini 2.0 Flash  | original             | 8        | 21   | 58     |
+|                   | perspective          | 8.5        | 24.5   | 60.5    |
+
+
 ## Installation
 
 1. Clone the repository:
@@ -36,14 +62,3 @@ Based on https://github.com/shaunak27/video_instance_counting.git
     ```sh
     python evaluation.py --data_path data --ground_truth_path ground_truth --output_folder results --prompt_type structured_perspective --model "gemini-2.5.pro-exp-03-25"
     ```
-
-## Results
-
-| Model             | Prompt Type          | Off-by-zero (%) | Off-by-one (%) | Off-by-five (%) |
-|-------------------|----------------------|----------|-----|------|
-| Gemini 1.5 Flash    | original             | -        | -   | -    |
-| Gemini 1.5 Flash    | perspective          | -        | -   | -    |
-| Gemini 1.5 Flash    | one_shot             | -        | -   | -    |
-| Gemini 1.5 Flash    | one_shot_perspective | -        | -   | -    |
-
-*Replace the hyphens (-) with your actual evaluation results.*
