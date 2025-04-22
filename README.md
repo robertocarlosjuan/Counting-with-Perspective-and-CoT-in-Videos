@@ -65,5 +65,5 @@ Given a strictly rightwards motion of camera:
     ```
 3. To assess perspective
     ```sh
-    python evaluation.py --data_path data --ground_truth_path ground_truth --output_folder results --prompt_type structured_perspective --model "gemini-2.5.pro-exp-03-25"
+    python evaluation.py --data_path data --ground_truth_path ground_truth --output_folder results --prompt_type structured_perspective --model "gemini-2.5-flash-preview-04-17"
     ```
