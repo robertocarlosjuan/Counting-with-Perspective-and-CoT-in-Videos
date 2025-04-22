@@ -29,7 +29,7 @@ Given videos with cakes on tables
 
 ### Perspectives with Gemini 2.5 Flash
 Given a strictly rightwards motion of camera:
-1. _24.5%_ was _correct_ in predicting only rightwards motion
+1. Only _24.5%_ was _correct_ in predicting only rightwards motion
 2. _54%_ predicted a forward translational motion (i.e. dolly forward)
 3. _42%_ predicted a rightward rotational yaw change (i.e. panning right)
 
