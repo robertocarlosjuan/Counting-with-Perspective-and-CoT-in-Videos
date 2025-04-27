@@ -26,6 +26,8 @@ Given videos with cakes on tables
 |                   | Combined | 10        | 27   | 76.5    |
 | Gemini 2.0 Flash  | original             | 8        | 21   | 58     |
 |                   | perspective          | 8.5        | 24.5   | 60.5    |
+| Gemini 2.5 Flash  | original             | 8  | 21   |  50 |
+|                   | perspective          | 8.5 | 21  | 57 |
 
 ### Perspectives with Gemini 2.5 Flash
 Given a strictly rightwards motion of camera:
